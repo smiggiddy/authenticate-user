@@ -34,4 +34,35 @@ router.post('/', async (req, res) => {
     
 });
 
+router.put('/:id', auth, async (req, res) => {
+    const result = handleErrors(req.body);
+    if (result.error) return res.status(400).send(result.error.details[0].message);
+
+    const user = await User.findByIdAndUpdate(req.params.id,
+    { 
+      first_name: req.body.first_name,
+      first_last: req.body.last_name,
+      DOB: req.body.DOB,
+      city: req.body.city,
+      state: req.body.state,
+      email: req.body.email,
+    }, { new: true });
+    
+    if (!user) {
+        return res.status(404).send('Movie Not Found!');
+    }
+   
+    res.send(user);
+});
+
+router.delete('/:id', auth, async (req, res) => {
+    const user = await User.findByIdAndRemove(req.params.id)
+
+    if (!user) {
+        return res.status(404).send('User Not Found!');
+    }
+
+    res.send(user);
+})
+
 module.exports = router
