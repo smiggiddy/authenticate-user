@@ -1,42 +1,42 @@
 const server = require('../../server')
 const supertest = require('supertest');
 const dotenv = require('dotenv');
-const { User, userSchema } = require('../../models/user');
+const { User, userSchema } = require('../user');
 
 dotenv.config();
 process.env.ENV = 'test';
 const request = supertest(server);
 
 describe('User Schema', () => {
-    it('should have a user schema', () => {
+    it('should have a user model', () => {
         expect(User).toBeDefined();
     });
-    it('should have a first name', () => {
+    it('Schema should have a first name', () => {
         expect(userSchema.tree.first_name).toBeDefined();
     })
-    it('should have a last name', () => {
+    it('Schema should have a last name', () => {
         expect(userSchema.tree.last_name).toBeDefined();
     })
-    it('should have a DOB', () => {
+    it('Schema should have a DOB', () => {
         expect(userSchema.tree.DOB).toBeDefined();
     })
-    it('should have a city', () => {
+    it('Schema should have a city', () => {
         expect(userSchema.tree.city).toBeDefined();
     })
-    it('should have a state', () => {
+    it('Schema should have a state', () => {
         expect(userSchema.tree.state).toBeDefined();
     })
-    it('should have an email', () => {
+    it('Schema should have an email', () => {
         expect(userSchema.tree.email).toBeDefined();
     })
-    it('should have a password', () => {
+    it('Schema should have a password', () => {
         expect(userSchema.tree.password).toBeDefined();
     })
-    it('should have a subscription', () => {
+    it('Schema should have a subscription', () => {
         expect(userSchema.tree.subscription_active).toBeDefined();
     })
     
-    it('should have an authentication method', () => {
+    it('Schema should have an authentication method', () => {
         expect(userSchema.methods.generateAuthToken).toBeDefined();
     })
 })
@@ -44,7 +44,7 @@ describe('User Schema', () => {
 describe('Test user routes: POST, GET, AUTH, PUT, DELETE', () => {
     let token;
     let userId;
-    it('(POST) should create a new user', async () => {
+    it('(POST) should create a new user based on schema', async () => {
         const res = await request
         .post('/api/users')
         .send({
@@ -63,7 +63,7 @@ describe('Test user routes: POST, GET, AUTH, PUT, DELETE', () => {
         
         expect(res.status).toEqual(200);
     });
-    it('(AUTH) should allow user to signin', async () => {
+    it('(AUTH) should allow user to signin with schema authentication method', async () => {
         const res = await request
         .post('/api/auth')
         .send({

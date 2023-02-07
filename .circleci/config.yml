@@ -1,0 +1,20 @@
+version 2.1
+jobs:
+  run_tests:
+    docker: #where things will be ran(docker, windows, mac, virtual machine)
+      - image: circleci/node:16.15.0
+    steps:
+      - checkout #git clone
+      - run:
+          name: Install NPM Dependencies
+          command: |
+            npm install --save
+      - run:
+          name: Run Unit Test
+          command: |
+            ./node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
+      - store_test_results:
+          path: test-results
+      -store_artifacts:
+          path: test-results
+      

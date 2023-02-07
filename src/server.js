@@ -28,9 +28,6 @@ process.env.ENV.trim() === 'test' ?
 :
 console.error('Not connected to a database!');
 
-//Display ENVIRONMENT
-console.log(`You are using the ${process.env.ENV} environment.`)
-
 //Enable Body Parse
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

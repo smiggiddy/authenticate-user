@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon src/server.js",
-    "test": "set ENV=test && jasmine --config=jasmine.json"
+    "test": "set ENV=test && jasmine --config=spec/support/jasmine.json"
   },
   "author": "Ralph Smith",
   "license": "ISC",
@@ -27,8 +27,7 @@
     "migrate-mongo": "^9.0.0",
     "mongoose": "^6.9.0",
     "nodemon": "^2.0.20",
-    "supertest": "^6.3.3",
-    "typescript": "^4.9.5"
+    "supertest": "^6.3.3"
   },
   "devDependencies": {
     "@types/jasmine": "^4.3.1",
