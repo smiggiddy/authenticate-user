@@ -1,5 +1,5 @@
-version 2.1
-jobs:
+version 2.1 
+jobs: 
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node:16.15.0
