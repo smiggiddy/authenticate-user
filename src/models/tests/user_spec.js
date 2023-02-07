@@ -8,7 +8,7 @@ process.env.ENV = 'test';
 const request = supertest(server);
 
 describe('User Schema', () => {
-    it('should have a user model', () => {
+    it('Schema should have a user model', () => {
         expect(User).toBeDefined();
     });
     it('Schema should have a first name', () => {
