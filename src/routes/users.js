@@ -7,7 +7,7 @@ const auth = require('../middleware/auth');
 
 
 router.get('/me', auth, async (req, res) => {
-    const user = await User.findById(req.user_id).select('-password');
+    const user = await User.findById(req.user._id).select('-password');
     res.send(user);
 });
 
@@ -41,11 +41,12 @@ router.put('/:id', auth, async (req, res) => {
     const user = await User.findByIdAndUpdate(req.params.id,
     { 
       first_name: req.body.first_name,
-      first_last: req.body.last_name,
+      last_name: req.body.last_name,
       DOB: req.body.DOB,
       city: req.body.city,
       state: req.body.state,
       email: req.body.email,
+      password: req.body.password
     }, { new: true });
     
     if (!user) {
