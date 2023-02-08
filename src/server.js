@@ -16,7 +16,7 @@ if (!process.env.JWT_PRIVATE_KEY) {
     process.exit(1);
 };
 
-process.env.ENV === 'dev' ?
+process.env.ENV.trim() === 'dev' ?
     mongoose.connect(process.env.MONGODB)
     .then(() => console.log('Connected to the User Authentication Database...'))
     .catch((err) => console.error(`Could not connect to the database: ${err}`) )

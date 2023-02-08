@@ -1,0 +1,16 @@
+version: "3"
+services:
+  auth-user-wci:
+    container_name: auth-user-wci
+    image: rlondon3/auth-user-wci
+    restart: always
+    ports:
+      - "5001:5001"
+    links:
+      - mongo
+    env_file: .env
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db

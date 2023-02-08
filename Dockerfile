@@ -1,4 +1,7 @@
 FROM node:alpine
 COPY . /app
-WORKDIR /app
-CMD node app.js
+WORKDIR /app/src
+RUN npm install 
+COPY package*.json .
+EXPOSE 5001
+CMD ["node", "server.js"]
