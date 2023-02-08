@@ -5,7 +5,7 @@ jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: rlondon3/auth-user-wci
-      - mongo: mongo
+      - image: mongo
     steps:
       - checkout #git clone
       - run:
