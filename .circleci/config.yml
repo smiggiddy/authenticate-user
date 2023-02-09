@@ -13,7 +13,7 @@ jobs:
           name: Install NPM Dependencies
           command: |
             npm install
-            npm run jasmine
+            npm run test
       - run:
           name: Run Unit Test
           command: |
