@@ -12,11 +12,11 @@ jobs:
       - run:
           name: Install NPM Dependencies
           command: |
-            npm install --save
+            npm install
       - run:
           name: Run Unit Test
           command: |
-            .\node_modules\jasmine\bin\jasmine src\models\tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
+            ./node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
       - store_test_results:
           path: test-results
       - store_artifacts:
