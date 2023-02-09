@@ -14,12 +14,12 @@ jobs:
           command: |
             npm install --save
       - run:
-          name: Run Unit Test
-          command: npm run test
+          name: Run
+          command: npm run start
       - run:
           name: Run Unit Test
           command: |
-            src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
+            /home/circleci/project/node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
       - store_test_results:
           path: test-results
       - store_artifacts:
