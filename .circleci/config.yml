@@ -6,8 +6,6 @@ jobs:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node
     steps:
-      - node/install:
-          node-version: 16.15.0
       - checkout #git clone
       - run:
           name: Install NPM Dependencies
