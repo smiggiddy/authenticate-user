@@ -14,9 +14,6 @@ jobs:
           command: |
             npm install --save
       - run:
-          name: Run
-          command: npm run start
-      - run:
           name: Run Unit Test
           command: |
             /home/circleci/project/node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
