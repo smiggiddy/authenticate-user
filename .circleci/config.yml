@@ -2,18 +2,17 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
 jobs:
-  build_tests: # this can be any name you choose
-    executor: node/default # use the default executor defined within the orb
+  run_tests:
+    docker: #where things will be ran(docker, windows, mac, virtual machine)
+      - image: cimg/base:2023.02
     steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - node/install:
+          node-version: 16.15.0
+      - checkout #git clone
       - run:
-          command: npm run test
-          name: Run tests
-      - run:
-          command: npm run build
-          name: Build app
+          name: Install NPM Dependencies
+          command: |
+            npm install --save
       - persist_to_workspace:
           root: ~/project
           paths:
