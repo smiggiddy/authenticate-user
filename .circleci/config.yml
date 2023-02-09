@@ -4,7 +4,7 @@ orbs:
 jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
-      - image: cimg/base:2023.02
+      - image: docker:17.05.0-ce-git
     steps:
       - node/install:
           node-version: 16.15.0
@@ -12,7 +12,6 @@ jobs:
       - run:
           name: Install NPM Dependencies
           command: |
-            source /opt/circleci/.npm/npm.sh
             npm install --save
       - run:
           name: Install Docker
