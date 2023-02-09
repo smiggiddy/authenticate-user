@@ -4,9 +4,10 @@ orbs:
 jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
-      - image: rlondon3/auth-user-wci
-      - image: mongo
+      - image: cimg/base:2023.02
     steps:
+      - node/install:
+          node-version: "16.15.0"
       - checkout #git clone
       - run:
           name: Install NPM Dependencies
@@ -20,6 +21,9 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
+      - run:
+          name: Back-End Build
+          command: npm run start
 workflows:
   build_tests:
     jobs:
