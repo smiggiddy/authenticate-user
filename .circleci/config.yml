@@ -15,7 +15,7 @@ jobs:
             npm install --save
       - run:
           name: Run Unit Test
-          command: npm run test
+          command: npm run start
       - run:
           name: Run Unit Test
           command: |
