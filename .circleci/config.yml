@@ -15,7 +15,7 @@ jobs:
             source /opt/circleci/.npm/npm.sh
             npm install --save
       - run:
-          name: Run Unit Test
+          name: Install Docker
           command: |
             ./node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
       - store_test_results:
