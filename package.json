@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
+    "backend:install": "npm i",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "set ENV=test && jasmine --config=spec/support/jasmine.json"
