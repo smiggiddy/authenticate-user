@@ -6,14 +6,11 @@ jobs:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node
     steps:
-      - checkout #git cl
-      - run:
-          name: Install NPM Dependencies
-          command: |
-            npm install --save
-      - run:
-          name: Install Back-End Dependencies
-          command: npm run backend:install
+      - checkout
+      - run: sudo npm install -g npm@latest
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
       - run:
           name: Run Unit Test
           command: |
