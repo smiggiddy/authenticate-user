@@ -4,11 +4,9 @@ orbs:
 jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
-      - image: cimg/base:stable
+      - image: circleci/node
     steps:
       - checkout
-      - restore_cache:
-          key: v1-deps-{{ checksum "package-lock.json" }}
      - run:
           name: install dependencies
           command: npm install
