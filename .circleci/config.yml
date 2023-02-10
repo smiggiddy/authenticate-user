@@ -33,9 +33,6 @@ jobs:
           cache-path: ./node_modules
           override-ci-command: npm install
       - run:
-          name: Install Back-End Dependencies
-          command: npm run backend:install
-      - run:
           name: Get versions
           command: |
             node -v
