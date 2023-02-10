@@ -11,6 +11,7 @@
         }
       }
     ],
+    "jsLoader": "require",
     "stopSpecOnExpectationFailure": false,
     "random": false
   }
