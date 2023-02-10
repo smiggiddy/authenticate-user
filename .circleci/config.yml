@@ -7,8 +7,6 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - checkout
-      - restore_cache:
-          key: v1-deps-{{ checksum "package-lock.json" }}
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
