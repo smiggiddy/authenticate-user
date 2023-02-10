@@ -6,11 +6,11 @@ jobs:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node
     steps:
-      - checkout
       - run: npm install
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
+      - checkout
       - run:
           name: Run Unit Test
           command: |
