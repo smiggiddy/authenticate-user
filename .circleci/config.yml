@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Run Unit Test
           command: |
-            sh ./node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
+            npm run test --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
       - store_test_results:
           path: test-results
       - store_artifacts:
