@@ -21,12 +21,9 @@ process.env.ENV.trim() === 'dev' ?
     .then(() => console.log('Connected to the User Authentication Database...'))
     .catch((err) => console.error(`Could not connect to the database: ${err}`) )
 :
-process.env.ENV.trim() === 'test' ? 
     mongoose.connect(process.env.SPEC_TEST_DB)
     .then(() => console.log('Connected to the User Spec Test Authentication Database...'))
     .catch((err) => console.error(`Could not connect to the database: ${err}`) )
-:
-console.error('Not connected to a database!', process.env.MONGODB, process.env.SPEC_TEST_DB);
 
 //Enable Body Parse
 app.use(express.json());
