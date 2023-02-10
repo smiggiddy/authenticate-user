@@ -10,7 +10,7 @@ jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node
-      - image: circleci/mongo:4.4
+      - image: circleci/mongo:4.0.28
         environment:
           MONGO_USERNAME: mongouser
           MONGO_PASSWORD: mongopass
