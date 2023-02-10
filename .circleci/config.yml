@@ -2,6 +2,10 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
 jobs:
+  env_var:
+    - build:
+        context: my_context_name
+jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node
