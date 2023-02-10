@@ -4,7 +4,7 @@ orbs:
 jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
-      - image: cimg/node:latest
+      - image: cimg/node
     steps:
       - checkout
       - restore_cache:
