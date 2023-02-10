@@ -6,15 +6,11 @@ jobs:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
       - image: circleci/node
     steps:
-      - checkout #git clone
+      - checkout #git cl
       - run:
           name: Install NPM Dependencies
           command: |
             npm install --save
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
       - run:
           name: Install Back-End Dependencies
           command: npm run backend:install
