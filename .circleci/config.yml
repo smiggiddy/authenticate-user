@@ -4,14 +4,21 @@ orbs:
 jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
-      - image: "cimg/base:stable"
+      - image: 'cimg/base:stable'
     steps:
       - checkout
       - restore_cache:
           key: v1-deps-{{ checksum "package-lock.json" }}
+     - run:
+          name: install dependencies
+          command: npm install
       - node/install-packages:
           cache-path: ~/project/node_modules
-          run: npm install
+          override-ci-command: npm install
+      - save_cache:
+          key: v1-deps-{{ checksum "package-lock.json" }}
+          paths: 
+            - node_modules 
       - run:
           name: Run Unit Test
           command: |
