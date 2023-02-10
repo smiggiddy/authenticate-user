@@ -4,7 +4,7 @@ orbs:
 jobs:
   run_tests:
     docker: #where things will be ran(docker, windows, mac, virtual machine)
-      - image: "cimg/base:stable"
+      - image: circleci/node
     steps:
       - checkout
       - node/install-packages:
