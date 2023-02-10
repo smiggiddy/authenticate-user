@@ -7,7 +7,7 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - run: npm install -g npm@latest
+      - run: npm install
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
