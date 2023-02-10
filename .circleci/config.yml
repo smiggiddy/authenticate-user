@@ -11,6 +11,7 @@ jobs:
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
+      - checkout
       - run:
           name: Run Unit Test
           command: |
