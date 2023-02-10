@@ -15,7 +15,7 @@ jobs:
           command: npm run backend:install
       - run:
           name: Files Exists
-          command: dir
+          command: dir node_modules
       - run:
           name: Run Unit Test
           command: |
