@@ -7,10 +7,12 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - checkout
-      - run: npm install
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: npm install
+      - run:
+          name: Install Back-End Dependencies
+          command: npm run backend:install
       - run:
           name: Run Unit Test
           command: |
