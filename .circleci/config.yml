@@ -13,10 +13,13 @@ jobs:
       - run:
           name: Install Back-End Dependencies
           command: npm run backend:install
+      -run:
+          name: Files Exists
+          command: dir
       - run:
           name: Run Unit Test
           command: |
-            ./node_modules/jasmine/lib/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
+            ./node_modules/jasmine/bin/jasmine src/models/tests --reporter jasmine-spec-reporter --reporter-options reportDir=test-results, reportFilename=test-results
       - store_test_results:
           path: test-results
       - store_artifacts:
