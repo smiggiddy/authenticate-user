@@ -17,10 +17,10 @@ Mongo Databses: spec-auth-user; auth-user <br /><br/>
 ## Environment Variables
 <br/> 
 PORT=5001 <br />
-MONGODB='mongodb://localhost/user-auth'<br />
-SPEC_TEST_DB='mongodb://localhost/spec-user-auth'<br />
-JWT_PRIVATE_KEY='AuthenticATEusER'<br />
-ENV='dev'<br />
+MONGODB='mongodb://localhost/<your-db-name>'<br />
+SPEC_TEST_DB='mongodb://localhost/<your-test-db-name>'<br />
+JWT_PRIVATE_KEY='<your-private-key>'<br />
+ENV='<your-env-name>'<br />
 *be sure to set in a .env file.
 
 ## Scripts:
