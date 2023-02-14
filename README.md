@@ -43,9 +43,7 @@ state: string <br />
 email: string <br />
 password: string uniq (Uppercase, numeric, special character, minlengh: 8) <br />
 subscription_active: bool <br />
-}
-<br />
- 
+} <br /> 
 Expect return message to be a JSON object of the created user.
 
 - JWT Authentication <br />
@@ -59,7 +57,7 @@ Status 200 will generate a JWT for Auth Header, 'x-auth-token'.<br />
 Access headers in Postman to retrieve JWT.<br />
 
 - Verify authentication token and user: '/api/users/me' <br />
-Create value pair in Postman Headers tab <br />
+Create value pair in Postman Headers tab <br /> <br />
 Key Value Pair: <br />
 x-auth-token: JWT<retrieved token> <br /> <br />
 Expect return message to be a JSON object of the created user. <br />
