@@ -32,7 +32,7 @@ npm run test- inits Jasmine to run unit test on the User Schema and User Routes
 
 ## END POINTS: 
 - Create User <br />
-In Postman create a JSON object to send to create a user: '/api/users' <br />
+In Postman create a JSON object to send to create a user: '/api/users' <br /> <br />
 Required fields: <br />
 {<br />
 first_name: string <br /> 
@@ -49,12 +49,12 @@ subscription_active: bool <br />
 Expect return message to be a JSON object of the created user.
 
 - JWT Authentication <br />
-In Postman create a JSON object for logging in: '/api/auth' <br />
+In Postman create a JSON object for logging in: '/api/auth' <br /> <br />
 Required fields: <br />
 {<br />
 email: string <br />
 password: string uniq (Uppercase, numeric, special character, minlengh: 8) <br />
-} <br />
+} <br /> <br />
 Status 200 will generate a JWT for Auth Header, 'x-auth-token'.<br />
 Access headers in Postman to retrieve JWT.<br />
 
