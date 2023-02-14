@@ -10,19 +10,20 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
 
 OVERVIEW
 ---------------------------
-Create database and start the API server. This project is running on localhost:5001.<br/>
-•2 Databases are used: **One for development and the other for testing. <br/>
+## Create database and start the API server. <br />
+This project is running on localhost:5001.<br/>
+2 Databases are used: **One for development and the other for testing. <br/>
 Mongo Databses: spec-auth-user; auth-user <br /><br/>
-Below are the environmental variables that needs to be set in a .env file:
+##Environment Variables
 <br/> 
-
 PORT=5001
 MONGODB='mongodb://localhost/user-auth'
 JWT_PRIVATE_KEY='AuthenticATEusER'
 SPEC_TEST_DB='mongodb://localhost/spec-user-auth'
 ENV='dev'<br />
+*be sure to set in a .env file.
 
-Below are the available scripts for the API:
+##Scripts:
 <br>
 npm run start- starts the node application with server.js<br />
 npm run dev- starts the applicaton with nodemon for continuous development<br/>
