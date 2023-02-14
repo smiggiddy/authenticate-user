@@ -32,7 +32,7 @@ npm run test- inits Jasmine to run unit test on the User Schema and User Routes
 
 ## END POINTS: 
 - Create User <br />
-In Postman create a JSON object to send to create a user. Send to: '/api/users' <br />
+In Postman create a JSON object to send to create a user: '/api/users' <br />
 Required fields: <br />
 {
 first_name: string 
@@ -49,7 +49,7 @@ subscription_active: bool
 Expect return message to be a JSON object of the created user.
 
 - JWT Authentication <br />
-In Postman create a JSON object for logging in. Send to: '/api/auth' <br />
+In Postman create a JSON object for logging in: '/api/auth' <br />
 Required fields: <br />
 {
 email: string.
@@ -58,10 +58,10 @@ password: string uniq (Uppercase, numeric, special character, minlengh: 8)
 Status 200 will generate a JWT for Auth Header, 'x-auth-token'.<br />
 Access headers in Postman to retrieve JWT.<br />
 
-- Verify authentication token: Get the user. Send to: '/api/users/me' <br />
+- Verify authentication token and user: '/api/users/me' <br />
 Create value pair in Postman Headers tab <br />
-Key Value Pair:
-x-auth-token: JWT<retrieved token>
-
+Key Value Pair: <br />
+x-auth-token: JWT<retrieved token> <br />
+Expect return message to be a JSON object of the created user. <br />
 ## Docker Image Link: <br />
 [https://hub.docker.com/repository/docker/rlondon3/auth-user-wci/general]
