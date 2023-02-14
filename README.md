@@ -63,4 +63,5 @@ Create value pair in Postman Headers tab <br />
 Key Value Pair:
 x-auth-token: JWT<retrieved token>
 
-
+## Docker Image Link: <br />
+[https://hub.docker.com/repository/docker/rlondon3/auth-user-wci/general]
