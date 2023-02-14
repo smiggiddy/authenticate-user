@@ -10,12 +10,11 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
 
 OVERVIEW
 ---------------------------
-Create database and start the API server. This project is running on localhost:5001.
-• **_MONGO DB_**
-•**_2 Databases are used:_**One for development and the other for testing. 
-  <br/>Databses: <br/> spec-auth-user; auth-user;
+Create database and start the API server. This project is running on localhost:5001.<br/>
+•2 Databases are used: **One for development and the other for testing. <br/>
+Mongo Databses: spec-auth-user; auth-user <br /><br/>
 Below are the environmental variables that needs to be set in a .env file:
-<br/> *Note that the values are not the same as the provided examples given above. 
+<br/> 
 
 PORT=5001
 MONGODB='mongodb://localhost/user-auth'
@@ -30,12 +29,10 @@ npm run dev- starts the applicaton with nodemon for continuous development<br/>
 npm run test- inits Jasmine to run unit test on the User Schema and User Routes
  
 
-
-
-# END POINTS 
-## Create User<br />
+#END POINTS 
+##Create User <br />
 In Postman create a JSON object to send to create a user. Send to: '/api/users' <br />
-Required fields:
+Required fields: <br />
 {
 first_name: string 
 last_name: string
