@@ -10,10 +10,10 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
 
 OVERVIEW
 ---------------------------
-## Create database and start the API server. <br />
+## Create database and start the API server <br />
 This project is running on localhost:5001.<br/>
 2 Databases are used: One for development and the other for testing. <br/>
-## Environment Variables
+## Environment Variables:
 <br/> 
 PORT=5001 <br />
 MONGODB='mongodb://localhost/your-db-name'<br />
