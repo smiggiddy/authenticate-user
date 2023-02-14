@@ -14,7 +14,7 @@ OVERVIEW
 This project is running on localhost:5001.<br/>
 2 Databases are used: **One for development and the other for testing. <br/>
 Mongo Databses: spec-auth-user; auth-user <br /><br/>
-##Environment Variables
+## Environment Variables
 <br/> 
 PORT=5001
 MONGODB='mongodb://localhost/user-auth'
