@@ -23,15 +23,15 @@ SPEC_TEST_DB='mongodb://localhost/spec-user-auth'
 ENV='dev'<br />
 *be sure to set in a .env file.
 
-##Scripts:
+## Scripts:
 <br>
 npm run start- starts the node application with server.js<br />
 npm run dev- starts the applicaton with nodemon for continuous development<br/>
 npm run test- inits Jasmine to run unit test on the User Schema and User Routes
  
 
-#END POINTS 
-##Create User <br />
+## END POINTS: 
+*Create User <br />
 In Postman create a JSON object to send to create a user. Send to: '/api/users' <br />
 Required fields: <br />
 {
@@ -48,7 +48,7 @@ subscription_active: bool
 This is a user signup(create a user). 
 Expect return message to be a JSON object of the created user.
 
-## JWT AUTHENTICATION ENDPOINTS
+*JWT Authentication <br />
 In post create a JSON object for logging in. Send to: '/api/auth' <br />
 Required fields:
 {
