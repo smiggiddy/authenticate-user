@@ -12,7 +12,7 @@ OVERVIEW
 ---------------------------
 ## Create database and start the API server. <br />
 This project is running on localhost:5001.<br/>
-2 Databases are used: **One for development and the other for testing. <br/>
+2 Databases are used: One for development and the other for testing. <br/>
 Mongo Databses: spec-auth-user; auth-user <br /><br/>
 ## Environment Variables
 <br/> 
@@ -31,7 +31,7 @@ npm run test- inits Jasmine to run unit test on the User Schema and User Routes
  
 
 ## END POINTS: 
-*Create User <br />
+- Create User <br />
 In Postman create a JSON object to send to create a user. Send to: '/api/users' <br />
 Required fields: <br />
 {
@@ -45,22 +45,21 @@ password: string uniq (Uppercase, numeric, special character, minlengh: 8)
 subscription_active: bool
 }
 <br />
-This is a user signup(create a user). 
+ 
 Expect return message to be a JSON object of the created user.
 
-*JWT Authentication <br />
-In post create a JSON object for logging in. Send to: '/api/auth' <br />
-Required fields:
+- JWT Authentication <br />
+In Postman create a JSON object for logging in. Send to: '/api/auth' <br />
+Required fields: <br />
 {
 email: string.
 password: string uniq (Uppercase, numeric, special character, minlengh: 8)
-}
-This will authenticate a user.
+} <br />
 Status 200 will generate a JWT for Auth Header, 'x-auth-token'.<br />
 Access headers in Postman to retrieve JWT.<br />
 
-Verify authentication token by getting the user. Send to: '/api/users/me' <br />
-Create value pair in Postman Headers tab<br />
+- Verify authentication token: Get the user. Send to: '/api/users/me' <br />
+Create value pair in Postman Headers tab <br />
 Key Value Pair:
 x-auth-token: JWT<retrieved token>
 
