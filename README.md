@@ -5,7 +5,7 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
         • This is a backend project with unit testing in Jasmine and a CI Pipeline via CircleCI •
       
                                         DEVELOPMENT TECHNOLOGY
-        Node.js| Express Jasmine | MongoDB | JSON Webtoken | Supertest | Bcrypt | Dotenv 
+        Node.js| Express | Jasmine | MongoDB | JSON Webtoken | Supertest | Bcrypt | Dotenv 
  ___________________________________________________________________
 
 OVERVIEW
@@ -13,9 +13,9 @@ OVERVIEW
 Create database and start the API server. This project is running on localhost:5001.
 • **_MONGO DB_**
 •**_2 Databases are used:_**One for development and the other for testing. 
-  <br>Databses: <br> spec-auth-user; auth-user;
+  <br/>Databses: <br/> spec-auth-user; auth-user;
 Below are the environmental variables that needs to be set in a .env file:
-<br> *Note that the values are not the same as the provided examples given above. 
+<br/> *Note that the values are not the same as the provided examples given above. 
 
 PORT=5001
 MONGODB='mongodb://localhost/user-auth'
