@@ -16,10 +16,10 @@ This project is running on localhost:5001.<br/>
 Mongo Databses: spec-auth-user; auth-user <br /><br/>
 ## Environment Variables
 <br/> 
-PORT=5001
-MONGODB='mongodb://localhost/user-auth'
-JWT_PRIVATE_KEY='AuthenticATEusER'
-SPEC_TEST_DB='mongodb://localhost/spec-user-auth'
+PORT=5001 <br />
+MONGODB='mongodb://localhost/user-auth'<br />
+JWT_PRIVATE_KEY='AuthenticATEusER'<br />
+SPEC_TEST_DB='mongodb://localhost/spec-user-auth'<br />
 ENV='dev'<br />
 *be sure to set in a .env file.
 
