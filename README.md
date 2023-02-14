@@ -2,7 +2,7 @@ AUTHENTICATE USER BACKEND PROJECT
 =======================================================
                           This is a Node and Express API for user authentication.
 
-        • This is a backend project with unit testing in Jasmine and a CI Pipeline via CircleCI [![CircleCI](https://dl.circleci.com/status-badge/img/gh/rlondon3/authenticate-user/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/rlondon3/authenticate-user/tree/main)•
+        • This is a backend project with unit testing in Jasmine and a CI Pipeline via CircleCI [![CircleCI](https://dl.circleci.com/status-badge/img/gh/rlondon3/authenticate-user/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/rlondon3/authenticate-user/tree/main) •
       
                                         DEVELOPMENT TECHNOLOGY
         Node.js| Express Jasmine | MongoDB | JSON Webtoken | Supertest | Bcrypt | Dotenv 
