@@ -29,7 +29,7 @@ npm run dev- starts the applicaton with nodemon for continuous development<br/>
 npm run test- inits Jasmine to run unit test on the User Schema and User Routes
  
 
-## END POINTS: 
+## End Points: 
 - Create User <br />
 In Postman create a JSON object to send to create a user: '/api/users' <br /> <br />
 Required fields: <br />
