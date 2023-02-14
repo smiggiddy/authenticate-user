@@ -43,7 +43,7 @@ state: string <br />
 email: string <br />
 password: string uniq (Uppercase, numeric, special character, minlengh: 8) <br />
 subscription_active: bool <br />
-} <br /> 
+} <br /> <br />
 Expect return message to be a JSON object of the created user.
 
 - JWT Authentication <br />
