@@ -8,57 +8,63 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
         Node.js| Express | Jasmine | MongoDB | JSON Webtoken | Supertest | Bcrypt | Dotenv 
  ___________________________________________________________________
 
-OVERVIEW
+# OVERVIEW
 ---------------------------
-## Create database and start the API server <br />
-This project is running on localhost:5001.<br/>
-2 Databases are used: One for development and the other for testing. <br/>
-## Environment Variables:
-<br/> 
-PORT=5001 <br />
-MONGODB='mongodb://localhost/your-db-name'<br />
-SPEC_TEST_DB='mongodb://localhost/your-test-db-name'<br />
-JWT_PRIVATE_KEY='your-private-key'<br />
-ENV='your-env-name'<br />
-*be sure to set in a .env file.
+## Create database and start the API server  
+This project is running on `localhost:5001` 
+2 Databases are used: One for development and the other for testing.  
+*SET* Environment Variables:
+```   
+PORT=5001 
+MONGODB='mongodb://localhost/your-db-name'
+SPEC_TEST_DB='mongodb://localhost/your-test-db-name'
+JWT_PRIVATE_KEY='your-private-key'
+ENV='your-env-name'
+```
+_*be sure to set in a .env file._  
 
 ## Scripts:
 <br>
-npm run start- starts the node application with server.js<br />
-npm run dev- starts the applicaton with nodemon for continuous development<br/>
-npm run test- inits Jasmine to run unit test on the User Schema and User Routes
+`npm run start` - starts the node application with server.js
+`npm run dev` - starts the applicaton with nodemon for continuous development<br/>
+`npm run test` - inits Jasmine to run unit test on the User Schema and User Routes
  
 
 ## End Points: 
-- Create User <br />
-In Postman create a JSON object to send to create a user: '/api/users' <br /> <br />
-Required fields: <br />
-{<br />
-first_name: string <br /> 
-last_name: string <br />
-DOB: Date <br />
-city: string <br />
-state: string <br />
-email: string <br />
-password: string uniq (Uppercase, numeric, special character, minlengh: 8) <br />
-subscription_active: bool <br />
-} <br /> <br />
+- Create User  
+In Postman create a JSON object to send to create a user: `/api/users` 
+Required fields:  
+```json
+{
+  "first_name": string 
+  "last_name": string 
+  "DOB": Date
+  "city": string 
+  "state": string 
+  "email": string 
+  "password": string uniq (Uppercase, numeric, special character, minlengh: 8) 
+  "subscription_active": bool 
+}
+```
 Expect return message to be a JSON object of the created user.
 
-- JWT Authentication <br />
-In Postman create a JSON object for logging in: '/api/auth' <br /> <br />
-Required fields: <br />
-{<br />
-email: string <br />
-password: string uniq (Uppercase, numeric, special character, minlengh: 8) <br />
-} <br /> <br />
-Status 200 will generate a JWT for Auth Header, 'x-auth-token'.<br />
-Access headers in Postman to retrieve JWT.<br />
+- JWT Authentication 
+In Postman create a JSON object for logging in: `/api/auth` 
+Required fields: 
+```json
+{
+  "email": string
+  "password": string uniq # (Uppercase, numeric, special character, minlengh: 8) 
+} 
+```
+Status 200 will generate a JWT for Auth Header, 'x-auth-token'.  
+Access headers in Postman to retrieve JWT.  
 
-- Verify authentication token and user: '/api/users/me' <br />
-Create value pair in Postman Headers tab <br /> <br />
-Key Value Pair: <br />
-x-auth-token: JWT<retrieved token> <br /> <br />
-Expect return message to be a JSON object of the created user. <br />
-## Docker Image Link: <br />
+- Verify authentication token and user: `api/users/me` 
+Create value pair in Postman Headers tab   
+Key Value Pair:   
+`x-auth-token: JWT<retrieved token>`   
+Expect return message to be a JSON object of the created user.  
+
+## Docker Image Link: 
 [https://hub.docker.com/repository/docker/rlondon3/auth-user-wci/general]
