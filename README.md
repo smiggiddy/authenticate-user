@@ -46,7 +46,7 @@ Required fields:
   "subscription_active": "True"
 }
 ```
-Password requirements `(Uppercase, numeric, special character, minlengh: 8)`
+Password requirements `(Uppercase, numeric, special character, minlengh: 8)`   
 Expect return message to be a JSON object of the newly created user.
 
 JWT Authentication   
