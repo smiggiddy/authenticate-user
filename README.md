@@ -11,7 +11,7 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
 # OVERVIEW
 ---------------------------
 ## Create database and start the API server  
-This project is running on `localhost:5001` 
+This project is running on `localhost:5001`   
 2 Databases are used: One for development and the other for testing.  
 *SET* Environment Variables:
 ```   
@@ -36,17 +36,18 @@ In Postman create a JSON object to send to create a user: `/api/users`
 Required fields:  
 ```json
 {
-  "first_name": string 
-  "last_name": string 
-  "DOB": Date
-  "city": string 
-  "state": string 
-  "email": string 
-  "password": string uniq (Uppercase, numeric, special character, minlengh: 8) 
-  "subscription_active": bool 
+  "first_name": "John", 
+  "last_name": "Doe",
+  "DOB": "2023/01/01",
+  "city": "Atlanta", 
+  "state": "Georgia",
+  "email": "rlondon3@github.com",
+  "password": "Password123#!",   
+  "subscription_active": "True"
 }
 ```
-Expect return message to be a JSON object of the created user.
+Password requirements `(Uppercase, numeric, special character, minlengh: 8)`
+Expect return message to be a JSON object of the newly created user.
 
 - JWT Authentication 
 In Postman create a JSON object for logging in: `/api/auth` 
