@@ -11,7 +11,7 @@ AUTHENTICATE USER BACKEND PROJECT [![CircleCI](https://dl.circleci.com/status-ba
 # OVERVIEW
 ---------------------------
 ## Create database and start the API server  
-This project is running on `localhost:5001`   
+This project will run on `localhost:5001`   
 2 Databases are used: One for development and the other for testing.  
 *SET* Environment Variables:
 ```   
@@ -31,8 +31,8 @@ _*be sure to set in a .env file._
  
 
 ## End Points: 
-- Create User  
-In Postman create a JSON object to send to create a user: `/api/users` 
+Create a user account via API endpoint.  
+Useing postman or cURL to create a JSON object to send to create a user: `/api/users` 
 Required fields:  
 ```json
 {
@@ -54,8 +54,8 @@ In Postman create a JSON object for logging in: `/api/auth`
 Required fields: 
 ```json
 {
-  "email": string
-  "password": string uniq # (Uppercase, numeric, special character, minlengh: 8) 
+  "email": "rlondon3@github.com",
+  "password": "Password1234!"
 } 
 ```
 Status 200 will generate a JWT for Auth Header, 'x-auth-token'.  
