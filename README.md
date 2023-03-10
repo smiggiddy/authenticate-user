@@ -49,7 +49,7 @@ Required fields:
 Password requirements `(Uppercase, numeric, special character, minlengh: 8)`
 Expect return message to be a JSON object of the newly created user.
 
-- JWT Authentication 
+JWT Authentication   
 In Postman create a JSON object for logging in: `/api/auth` 
 Required fields: 
 ```json
@@ -61,7 +61,7 @@ Required fields:
 Status 200 will generate a JWT for Auth Header, 'x-auth-token'.  
 Access headers in Postman to retrieve JWT.  
 
-- Verify authentication token and user: `api/users/me` 
+Verify authentication token and user: `api/users/me` 
 Create value pair in Postman Headers tab   
 Key Value Pair:   
 `x-auth-token: JWT<retrieved token>`   
